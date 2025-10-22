@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update  # use 'validate' in production
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  application:
+    name: backendapp
+server:
+  address: 127.0.0.1
+  port: 8080
