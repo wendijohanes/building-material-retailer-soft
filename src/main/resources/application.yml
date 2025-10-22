@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/building_materials
     username: postgres
-    password: yyyyy
+    password: zzz
   jpa:
     hibernate:
       ddl-auto: update  # use 'validate' in production

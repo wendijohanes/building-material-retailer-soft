@@ -10,8 +10,8 @@
 .DS_Store
 
 # Application config (sensitive)
-src/main/resources/application.yml
-src/main/resources/application.properties
+/src/main/resources/application.yml
+/src/main/resources/application.properties
 
 # Environment-specific configs
 .env
