@@ -23,4 +23,7 @@ public class Customer {
     private String email;
 
     private String phone;
+
+    @Column(columnDefinition = "TEXT")
+    private String description;
 }
