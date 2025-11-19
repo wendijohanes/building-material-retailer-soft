@@ -4,6 +4,7 @@ import com.example.backendapp.entity.Customer;
 import com.example.backendapp.service.CustomerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 import java.util.List;
 
 @RestController
@@ -28,7 +29,10 @@ public class CustomerController {
 
     @PostMapping
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
-        return ResponseEntity.ok(customerService.createCustomer(customer));
+        //return ResponseEntity.ok(customerService.createCustomer(customer));
+
+        Customer savedCustomer = customerService.createCustomer(customer);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedCustomer);
     }
 
     @PutMapping("/{id}")
